@@ -14,8 +14,6 @@ alert("Correct - the answer was " + correct + "! You must be psychic!");
 
 // Quiz
 
-// Quiz
-
 var questions = [
   {
     question: "What is the highest number used in a Sudoku puzzle?",
@@ -30,9 +28,9 @@ var questions = [
   {
   question: "What unit is used to measure horses?",
   answers: {
-    a: "Hands",
-    b: "Feet",
-    c: "Legs"
+    a: 'Hands',
+    b: 'Feet',
+    c: 'Legs'
   },
   correctAnswer: 'a'
 },
@@ -40,9 +38,9 @@ var questions = [
 {
 question: "What kind of instrument can be bass, Spanish or electric?",
 answers: {
-  a: "Guitar",
-  b: "Cello",
-  c: "Violin"
+  a: 'Guitar',
+  b: 'Cello',
+  c: 'Violin'
 },
 correctAnswer: 'a'
 }
@@ -106,8 +104,7 @@ function generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton
         //add to the number of correct answers
         numCorrect++;
         //colour answers green
-        answerContainers[1].style.color = 'lightgreen';
-
+        answerContainers[i].style.color = 'lightgreen';
       }
       //if answer is wrong or blank
       else{
