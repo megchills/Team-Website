@@ -28,6 +28,21 @@ a {
     margin-top: 30px;
 }
 
+.question {
+    font-weight: 600;
+}
+
+.answers {
+    margin-bottom: 15px;
+}
+
+#results {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 120px;
+}
+
 .results-btn {
     display: flex;
     justify-content: center;
