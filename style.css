@@ -22,7 +22,7 @@ a {
 #quiz {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     font-size: 2em;
     margin-top: 30px;
@@ -33,6 +33,7 @@ a {
     width: 60%;
     height: 450px;
     overflow: scroll;
+    padding: 25px;
 }
 
 container {
@@ -52,14 +53,14 @@ container {
     text-align: center;
     font-size: 3em;
     font-weight: bold;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 .results-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .results#submit {
