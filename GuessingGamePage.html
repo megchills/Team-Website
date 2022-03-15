@@ -1,18 +1,32 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-<link rel="stylesheet" href="styles.css">
-<script src="Games.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Games.js"></script>
+    <script src="https://kit.fontawesome.com/1335e3ba14.js" crossorigin="anonymous"></script>
 </head>
+
+<header class="blue">
+    <h1>CKM GAMES</h1>
+        <form id="form">
+            <input type="search" id="query" name="q" placeholder="Search...">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+</header>
 
 <body>
     <div class="container">
         <div id="gametext">
-            <p>"Welcome to the guessing game! Click the image to play"</p>
+            <p>Welcome to the guessing game!</p>
         </div>
-        <div id="numberwang">
-            <img src="images\numberwang.jpg" height="500" onclick="GuessingGame()">
+        <div id="button">
+            <button class="num-button" onclick="GuessingGame()">Click Here To Play!</button>
         </div>
     </div>
 </body>
 
-
-
+</html>

@@ -112,7 +112,7 @@ function generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton
         answerContainers[i].style.color = "red"
       }
     }
-    //show nuymber of correct answers out of total
+    //show number of correct answers out of total
     resultsContainer.innerHTML = "Well done! You scored " + numCorrect + " out of " + questions.length;
   }
 
