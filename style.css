@@ -113,7 +113,7 @@ p {
     font-size: 4em;
     display: flex;
     justify-content: center;
-    margin-bottom: 32px;
+    margin: 32px;
 }
 
 #button {
@@ -252,4 +252,55 @@ button:hover {
     
     .carousel__indicator.current-slide {
         background-color: rgba(0,0,0,.75);
+    }
+
+    @media only screen and (min-width: 320px) and (max-width: 480px) {
+
+       #results {
+           font-size: 2em;
+           margin-top: 45px;
+        }
+
+        .results-btn {
+            margin-top: 45px;
+        }
+
+        #quiz {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .card {
+            width: 70%;
+            padding: 30px;
+        }
+
+        #query {
+            width: 120px;
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        .card {
+            height: 500px;
+        }
+
+        .answers {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #gametext {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .home-text {
+            font-size: 3em;
+        }
     }
