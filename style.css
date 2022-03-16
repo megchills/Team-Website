@@ -273,6 +273,7 @@ button:hover {
         .card {
             width: 70%;
             padding: 30px;
+            height: 500px;
         }
 
         #query {
@@ -281,10 +282,6 @@ button:hover {
 
         h1 {
             font-size: 1.5em;
-        }
-
-        .card {
-            height: 500px;
         }
 
         .answers {
