@@ -1,32 +1,22 @@
-<!DOCTYPE html>
-<html>
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Guessing Game</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="Games.js"></script>
-    <script src="https://kit.fontawesome.com/1335e3ba14.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="GuessingGamestyles.css">
+<script src="GuessingGamescript.js"></script>
 </head>
 
-<header class="blue">
-    <h1>CKM GAMES</h1>
-        <form id="form">
-            <input type="search" id="query" name="q" placeholder="Search...">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-</header>
-
 <body>
-    <div class="container">
-        <div id="gametext">
-            <p>Welcome to the guessing game!</p>
-        </div>
-        <div id="button">
-            <button class="num-button" onclick="GuessingGame()">Click Here To Play!</button>
-        </div>
+<p>Guess  number between 1 and 10</p>
+<input type="text" name="answer" id="answer">
+    
+    <button type="button" id="check" onclick="check();">Guess</button>
+
+  <div id="divoverlay">
+  </div>
+  <div id="dialogbox">
+    <div>
+      <div id="dialogboxhead"></div>
+      <div id="dialogboxbody"></div>
+      <div id="dialogboxfoot"></div>
     </div>
+  </div>
 </body>
 
-</html>
