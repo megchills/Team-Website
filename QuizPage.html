@@ -10,7 +10,9 @@
 </head>
 
 <header class="yellow">
-    <a href="index.html"><h1>CKM GAMES</h1></a>
+    <a href="index.html">
+        <h1>CKM GAMES</h1>
+    </a>
     <form id="form">
         <input type="search" id="query" name="q" placeholder="Search...">
         <button type="submit"><i class="fa fa-search"></i></button>
@@ -18,8 +20,13 @@
 </header>
 
 <body>
-    <div id="quiz"></div>
-    <button id="submit">Get your results!</button>
+    <container>
+        <div class="card" id="quiz"></div>
+    </container>
+
+    <div class="results-btn">
+        <button class="results" id="submit">Get your results!</button>
+    </div>
     <div id="results"></div>
     <script script src="Games.js">generateQuiz(questions, quizContainer, resultsContainer, submitButton)</script>
 </body>
