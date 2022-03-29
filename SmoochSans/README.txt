@@ -7,20 +7,20 @@ Smooch Sans is a variable font with this axis:
   wght
 
 This means all the styles are contained in a single file:
-  Smooch_Sans/SmoochSans-VariableFont_wght.ttf
+  SmoochSans-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
 that aren’t available as static fonts. Not all apps support variable fonts, and
 in those cases you can use the static font files for Smooch Sans:
-  Smooch_Sans/static/SmoochSans-Thin.ttf
-  Smooch_Sans/static/SmoochSans-ExtraLight.ttf
-  Smooch_Sans/static/SmoochSans-Light.ttf
-  Smooch_Sans/static/SmoochSans-Regular.ttf
-  Smooch_Sans/static/SmoochSans-Medium.ttf
-  Smooch_Sans/static/SmoochSans-SemiBold.ttf
-  Smooch_Sans/static/SmoochSans-Bold.ttf
-  Smooch_Sans/static/SmoochSans-ExtraBold.ttf
-  Smooch_Sans/static/SmoochSans-Black.ttf
+  static/SmoochSans-Thin.ttf
+  static/SmoochSans-ExtraLight.ttf
+  static/SmoochSans-Light.ttf
+  static/SmoochSans-Regular.ttf
+  static/SmoochSans-Medium.ttf
+  static/SmoochSans-SemiBold.ttf
+  static/SmoochSans-Bold.ttf
+  static/SmoochSans-ExtraBold.ttf
+  static/SmoochSans-Black.ttf
 
 Get started
 -----------
