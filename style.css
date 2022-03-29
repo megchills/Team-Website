@@ -305,7 +305,6 @@ button:hover {
     }
 }
 
-//Guessing game styles
 #divoverlay{
     display: none;
     opacity: 0.8;
@@ -340,7 +339,7 @@ button:hover {
 }
 
 
-//Memory game styles 
+
 .grid{
     display: flex;
     flex-wrap: wrap;
