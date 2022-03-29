@@ -24,39 +24,42 @@
     <p class="home-text"> Try some fun games! </p>
 
     <div class="carousel">
-        <button class="carousel__button carousel__button--left">
-            <img src="left.jpg" alt="">
 
+        <button class="carousel__button carousel__button--left is-hidden">
+            <img src="left.jpg" alt="">
         </button>
         <div class="carousel__track-container">
             <ul class="carousel__track">
 
-                <a href="QuizPage.html">
-                    <li class="carousel__slide"></li>
-                    <img class="carousel__image" img src="quiz.jpg" width="600" height="700" alt="">
-                </a>
+                <li class="carousel__slide current-slide">
+                    <a href="QuizPage.html">
+                        <img class="carousel__image" img src="quiz.jpg" alt="">
+                    </a>
+                </li>
 
-                <a href="GuessingGamePage.html">
-                    <li class="carousel__slide"></li>
-                    <img class="carousel__image" img src="number.jpg" width="600" height="700" alt="">
-                </a>
+                <li class="carousel__slide">
+                    <a href="GuessingGamePage.html">
+                        <img class="carousel__image" img src="number.jpg" alt="">
+                    </a>
+                </li>
 
-                <a href="SecretGamePage.html">
-                    <li class="carousel__slide"></li>
-                    <img class="carousel__image" img src="secret.jpg" width="600" height="700" alt="">
-                </a>
-
+                <li class="carousel__slide">
+                    <a href="SecretGamePage.html">
+                        <img class="carousel__image" img src="secret.jpg" alt="">
+                    </a>
+                </li>
             </ul>
-            <button class="carousel__button carousel__button--right">
-                <img src="right.jpg" alt="">
-            </button>
-
-            <div class="carousel__nav">
-                <button class="carousel__indicator current-slide"></button>
-                <button class="carousel__indicator"></button>
-                <button class="carousel__indicator"></button>
-            </div>
         </div>
+        <button class="carousel__button carousel__button--right">
+            <img src="right.jpg" alt="">
+        </button>
+
+        <div class="carousel__nav">
+            <button class="carousel__indicator current-slide"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+        </div>
+        <script src="./Carousel.js"></script>
 </body>
 
 </html>

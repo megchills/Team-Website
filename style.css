@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Smooch+Sans:wght@100;200;300;400;500;600;700;800;900&family=VT323&display=swap');
+@font-face {
+    font-family: 'Major Mono Display';
+    src: url(MajorMonoDisplay/MajorMonoDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Smooch Sans';
+    src: url(SmoochSans/SmoochSans-VariableFont_wght.ttf);
+}
+
+html {
+    height: 100%;
+}
 
 header {
     display: flex;
@@ -12,6 +24,8 @@ header {
 
 body {
     font-family: 'Smooch Sans';
+    height: 100%;
+    overflow: hidden;
 }
 
 a {
@@ -25,7 +39,13 @@ a {
     justify-content: start;
     align-items: center;
     font-size: 2em;
-    margin-top: 30px;
+    margin-top: 35px;
+}
+
+.quiz {
+    background-image: url(quiz.png);
+    display: flex;
+    flex-direction: column;
 }
 
 .card {
@@ -127,30 +147,41 @@ p {
     margin-top: 250px;
 }
 
-.num-button {
+.guess-btn {
     background-color: #1bbcf3;
     color: white;
-    border-radius: 12px;
-    padding: 15px 32px;
+    border-radius: 0 12px 12px 0;
+    padding: 10px 32px;
     border: none;
     text-decoration: none;
     font-size: 1.8em;
     font-family: inherit;
 }
 
-.num-button:hover {
+.guess-btn:hover {
     color: #1bbcf3;
     background-color: white;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     transition: 0.3s;
-    background-color: #1bbcf3;
+    background-color: #23a2cc;
     color: white;
-    border-radius: 12px;
-    padding: 15px 32px;
+    border-radius: 0 12px 12px 0;
+    padding: 10px 32px;
     border: none;
     text-decoration: none;
     font-size: 1.8em;
     font-family: inherit;
+}
+
+.number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    background-image: url(number.png);
+}
+
+.number p {
+    margin-top: 0;
 }
 
 form {
@@ -166,47 +197,54 @@ form {
     color: black;
     font-family: 'Smooch Sans';
     font-size: 1.5em;
+    border-radius: 5px 0 0 5px;
 }
 
 button {
     border: none;
     padding: 2px 6px;
     background-color: white;
+    border-radius: 0 5px 5px 0;
 }
 
 button:hover {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    border-style: ridge ridge ridge none;
-    border-color: white;
-    padding: 1px 5px;
+    border: none;
+    padding: 2px 6px;
+}
+
+.carousel__button:hover {
+    background: none;
 }
 
 .carousel {
-    position: relative;
-    height: 600px;
-    width: 90%;
     margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    height: 700px;
+    width: 100%
 }
 
 .carousel__image {
+    border-radius: 2%;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-
+    object-fit: contain;
 }
 
 .carousel__track-container {
-    background-color: palegoldenrod;
-    padding: 10px;
-    height: 150%;
+    height: 100%;
     position: relative;
+    overflow: hidden;
 }
 
 .carousel__track {
     padding: 0;
     margin: 0;
     list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
 }
 
 .carousel__slide {
@@ -219,19 +257,19 @@ button:hover {
 .carousel__button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    height: 200px;
-    background-color: transparent;
+    transform: translateY(50%);
+    background: transparent;
     border: 0;
     cursor: pointer;
+    align-self: center;
 }
 
 .carousel__button--left {
-    left: -50px;
+    left: 120px;
 }
 
 .carousel__button--right {
-    right: -50px;
+    right: 120px;
 }
 
 .carousel__button img {
@@ -239,9 +277,10 @@ button:hover {
 }
 
 .carousel__nav {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
+   display: flex;
+   justify-content: center;
+   padding: 10px 0;
+   cursor: pointer;
 }
 
 .carousel__indicator {
@@ -249,12 +288,91 @@ button:hover {
     border-radius: 50%;
     width: 15px;
     height: 15px;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(220, 87, 130, 0.5);
     margin: 0 12px;
 }
 
+.carousel__indicator:hover {
+    background-color: rgba(220, 87, 130, 0.7);
+}
+
 .carousel__indicator.current-slide {
-    background-color: rgba(0, 0, 0, .75);
+    background-color: #dc5782;
+}
+
+.is-hidden {
+    display: none;
+}
+
+#divoverlay {
+    display: none;
+    opacity: 0.65;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #FFF;
+    width: 100%;
+    z-index: 10;
+}
+
+#dialogbox {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 7px;
+    width: 550px;
+    z-index: 10;
+}
+
+#dialogboxbody {
+    background: #1bbcf3;
+    border-radius: 7px 7px 0 0;
+    padding: 20px;
+    color: #FFF;
+    font-size: 2em;
+}
+
+#dialogboxfoot {
+    background: #81e0ff;
+    border-radius: 0 0 7px 7px;
+    padding: 10px 20px 10px 10px;
+    text-align: right;
+}
+
+.guess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ok {
+    font-family: inherit;
+    font-size: 1.5em;
+    border-style: none;
+    padding: 0;
+    color: #12495c;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.ok:hover {
+    border-style: none;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#answer {
+    font-size: 2em;
+    width: 5vw;
+    text-align: center;
+    font-family: inherit;
+    background-color: rgba(27, 188, 243, 0.5);
+    border-style: none;
+    border-radius: 12px 0 0 12px;
+    height: 52.5px;
+}
+
+input {
+    outline: none;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {

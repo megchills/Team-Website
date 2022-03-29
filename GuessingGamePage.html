@@ -1,23 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<link rel="stylesheet" href="GuessingGamestyles.css">
-<script src="GuessingGamescript.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="GuessingGamescript.js"></script>
+  <script src="https://kit.fontawesome.com/1335e3ba14.js" crossorigin="anonymous"></script>
+  <title>Number Guessing</title>
 </head>
 
-<header class="blue">
+<body>
+
+  <header class="blue">
     <a href="index.html">
-        <h1>CKM GAMES</h1>
+      <h1>CKM GAMES</h1>
     </a>
     <form id="form">
-        <input type="search" id="query" name="q" placeholder="Search...">
-        <button type="submit"><i class="fa fa-search"></i></button>
+      <input type="search" id="query" name="q" placeholder="Search...">
+      <button type="submit"><i class="fa fa-search"></i></button>
     </form>
-</header>
+  </header>
 
-<body>
-<p>Guess  number between 1 and 10</p>
-<input type="text" name="answer" id="answer">
-    
-    <button type="button" id="check" onclick="check();">Guess</button>
+  <container class="number">
+    <p>Guess a number between 1 and 10</p>
+    <div class="guess">
+      <input type="text" name="answer" id="answer">
+
+      <button class="guess-btn" type="button" id="check" onclick="check();">Guess</button>
+    </div>
+  </container>
 
   <div id="divoverlay">
   </div>
@@ -29,4 +41,3 @@
     </div>
   </div>
 </body>
-
