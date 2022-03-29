@@ -338,3 +338,12 @@ button:hover {
   padding: 10px;
   text-align: right;
 }
+
+
+//Memory game styles 
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 400px;
+}
