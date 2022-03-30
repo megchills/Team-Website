@@ -87,6 +87,13 @@ button:hover {
 
 /* INDEX */
 
+.index-content {
+    background-color: rgba(220, 87, 130, 0.2);
+    height: 93vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 .carousel__button:hover {
     background: none;
 }
@@ -103,6 +110,7 @@ button:hover {
     height: 700px;
     object-fit: contain;
     margin-left: calc((100vw - 1250px) / 2);
+    border-radius: 40px;
 }
 
 .carousel__track-container {
@@ -133,27 +141,16 @@ button:hover {
     background: transparent;
     border: 0;
     cursor: pointer;
-    align-self: center;
     z-index: 10;
 }
 
-.carousel__button--left {
-    left: 230px;
-}
-
-.carousel__button--right {
-    right: 230px;
-}
-
-.carousel__button img {
-    width: 100px;
-}
 
 .carousel__nav {
     display: flex;
     justify-content: center;
     padding: 10px 0;
     cursor: pointer;
+    margin-top: 15px;
 }
 
 .carousel__indicator {
@@ -194,6 +191,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     height: 93vh;
+    background-color: rgba(248, 219, 83, 0.2);
 }
 
 .card {
@@ -383,19 +381,37 @@ container {
     background-color: #fcb8a1;
 }
 
-.grid{
+.grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    width: 85vw;
-    height: 70vh;
+    max-width: 1500px;
+    max-height: 750px;
+    margin-bottom: 15px;
+}
+
+.content {
+    height: 93vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    background-color: rgba(252, 184, 161, 0.2);
 }
 
 img {
-    width: 250px;
+    width: 215px;
     object-fit: contain;
+    border-radius: 10px;
+    padding: 5px;
 }
+
+img:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+
 
 .memory-container {
     display: flex;

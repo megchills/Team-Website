@@ -108,6 +108,7 @@ function flipcard() {
     }
 }
 
+
 createBoard()
 
 })
