@@ -91,11 +91,7 @@ button:hover {
     background-color: rgba(220, 87, 130, 0.2);
     height: 93vh;
     display: flex;
-    flex-flow: column nowrap;
-}
-
-.carousel__button:hover {
-    background: none;
+    align-items: center;
 }
 
 .carousel {
@@ -106,7 +102,7 @@ button:hover {
 }
 
 .carousel__image {
-    width: 1250px;
+    width: 1245px;
     height: 700px;
     object-fit: contain;
     margin-left: calc((100vw - 1250px) / 2);
@@ -134,17 +130,6 @@ button:hover {
     width: 100%
 }
 
-.carousel__button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    z-index: 10;
-}
-
-
 .carousel__nav {
     display: flex;
     justify-content: center;
@@ -158,20 +143,16 @@ button:hover {
     border-radius: 50%;
     width: 15px;
     height: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     margin: 0 12px;
 }
 
 .carousel__indicator:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(220, 87, 130, 0.5);
 }
 
 .carousel__indicator.current-slide {
-    background-color: #000000;
-}
-
-.is-hidden {
-    display: none;
+    background-color: #dc5782;
 }
 
 
@@ -224,14 +205,13 @@ container {
     background-color: rgba(27, 188, 243, 0.5);
     border-style: none;
     border-radius: 12px 0 0 12px;
-    height: 52.5px;
+    height: 53px;
 }
 
 #results {
     text-align: center;
     font-size: 3em;
     font-weight: bold;
-    margin-top: 30px;
 }
 
 .results-btn {
@@ -411,8 +391,6 @@ img:active {
     transition: transform .2s;
 }
 
-
-
 .memory-container {
     display: flex;
     flex-direction: column;
@@ -425,9 +403,14 @@ img:active {
 h3 {
     font-size: 3em;
     text-align: center;
-    margin: 10px;
+    margin: 10px 300px;
 }
 
+.stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
 /* MEDIA QUERY */
 

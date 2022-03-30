@@ -62,6 +62,7 @@ var cardsChosenID = []
 var cardsWon = []
 
 
+var attempts = []
 
 // create game board
 function createBoard() {
@@ -76,6 +77,7 @@ function createBoard() {
 
 //check for matches 
 function checkForMatch() {
+    attempts++
     var cards = document.querySelectorAll('img')
     const optionOneID = cardsChosenID[0]
     const optionTwoID = cardsChosenID[1]
@@ -112,5 +114,3 @@ function flipcard() {
 createBoard()
 
 })
-
-
