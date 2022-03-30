@@ -57,12 +57,13 @@ cardArray.sort(() => 0.5-Math.random())
 
 const grid = document.querySelector('.grid')
 const resultDisplay = document.querySelector('#result')
+const attemptsDisplay = document.querySelector('#attempts')
 var cardsChosen = []
 var cardsChosenID = []
 var cardsWon = []
 
 
-var attempts = []
+var attempts = 0
 
 // create game board
 function createBoard() {
@@ -77,7 +78,6 @@ function createBoard() {
 
 //check for matches 
 function checkForMatch() {
-    attempts++
     var cards = document.querySelectorAll('img')
     const optionOneID = cardsChosenID[0]
     const optionTwoID = cardsChosenID[1]
@@ -97,6 +97,9 @@ function checkForMatch() {
     if (cardsWon.length === cardArray.length/2){
         resultDisplay.textContent = 'Congratulations, you found them all!'
     }
+    attempts++
+    attemptsDisplay.textContent = attempts
+    console.log(attempts)
 }
 
 //flip card
