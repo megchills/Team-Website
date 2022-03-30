@@ -21,45 +21,42 @@
         </form>
     </header>
 
-    <p class="home-text"> TRY SOME FUN GAMES! </p>
+    <div class="index-content">
 
-    <div class="carousel">
+        <p class="home-text"> TRY SOME FUN GAMES! </p>
 
-        <div class="carousel__track-container">
-            <button class="carousel__button carousel__button--left is-hidden">
-                <img src="left.png" alt="">
-            </button>
-            <ul class="carousel__track">
+        <div class="carousel">
 
-                <li class="carousel__slide current-slide">
-                    <a href="QuizPage.html">
-                        <img class="carousel__image" img src="quiz.jpg" alt="">
-                    </a>
-                </li>
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
 
-                <li class="carousel__slide">
-                    <a href="GuessingGamePage.html">
-                        <img class="carousel__image" img src="number.jpg" alt="">
-                    </a>
-                </li>
+                    <li class="carousel__slide current-slide">
+                        <a href="QuizPage.html">
+                            <img class="carousel__image" img src="quiz.jpg" alt="">
+                        </a>
+                    </li>
 
-                <li class="carousel__slide">
-                    <a href="SecretGamePage.html">
-                        <img class="carousel__image" img src="secret.jpg" alt="">
-                    </a>
-                </li>
-            </ul>
-            <button class="carousel__button carousel__button--right">
-                <img src="right.png" alt="">
-            </button>
+                    <li class="carousel__slide">
+                        <a href="GuessingGamePage.html">
+                            <img class="carousel__image" img src="number.jpg" alt="">
+                        </a>
+                    </li>
+
+                    <li class="carousel__slide">
+                        <a href="SecretGamePage.html">
+                            <img class="carousel__image" img src="secret.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="carousel__nav">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+            </div>
+            <script src="./Carousel.js"></script>
         </div>
-
-        <div class="carousel__nav">
-            <button class="carousel__indicator current-slide"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
-        </div>
-        <script src="./Carousel.js"></script>
 </body>
 
 </html>
