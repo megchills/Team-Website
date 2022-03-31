@@ -4,51 +4,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardArray = [
     {
         name: 'avocado',
-        img: 'avocado.png'
+        img: '../imgs/avocado.png'
     },
     {
         name: 'avocado',
-        img: 'avocado.png'
+        img: '../imgs/avocado.png'
     },
     {
         name: 'donut',
-        img: 'donut.png'
+        img: '../imgs/donut.png'
     },
     {
         name: 'donut',
-        img: 'donut.png'
+        img: '../imgs/donut.png'
     },
     {
         name: 'cookies',
-        img: 'cookies.png'
+        img: '../imgs/cookies.png'
     },
     {
         name: 'cookies',
-        img: 'cookies.png'
+        img: '../imgs/cookies.png'
     },
     {
         name: 'pizza',
-        img: 'pizza.png'
+        img: '../imgs/pizza.png'
     },
     {
         name: 'pizza',
-        img: 'pizza.png'
+        img: '../imgs/pizza.png'
     },
     {
         name: 'lemons',
-        img: 'lemons.png'
+        img: '../imgs/lemons.png'
     },
     {
         name: 'lemons',
-        img: 'lemons.png'
+        img: '../imgs/lemons.png'
     },
     {
         name: 'cake',
-        img: 'cake.png'
+        img: '../imgs/cake.png'
     },
     {
         name: 'cake',
-        img: 'cake.png'
+        img: '../imgs/cake.png'
     }
 ]
 
@@ -69,7 +69,7 @@ var attempts = 0
 function createBoard() {
     for (let i=0; i< cardArray.length; i++){
         var card = document.createElement('img')
-        card.setAttribute('src', 'blank.png')
+        card.setAttribute('src', '../imgs/blank.png')
         card.setAttribute('data-id', i)
         card.addEventListener('click', flipcard)
         grid.appendChild(card)
@@ -83,12 +83,12 @@ function checkForMatch() {
     const optionTwoID = cardsChosenID[1]
     if (cardsChosen[0] === cardsChosen[1]){
         alert('You found a match!')
-        cards[optionOneID].setAttribute('src', 'white.png')
-        cards[optionTwoID].setAttribute('src', 'white.png')
+        cards[optionOneID].setAttribute('src', '../imgs/white.png')
+        cards[optionTwoID].setAttribute('src', '../imgs/white.png')
         cardsWon.push(cardsChosen)
     } else {
-        cards[optionOneID].setAttribute('src', 'blank.png')
-        cards[optionTwoID].setAttribute('src', 'blank.png')
+        cards[optionOneID].setAttribute('src', '../imgs/blank.png')
+        cards[optionTwoID].setAttribute('src', '../imgs/blank.png')
         alert('Sorry, try again!')
     }
     cardsChosen = []
