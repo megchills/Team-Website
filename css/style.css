@@ -145,14 +145,6 @@ button:hover {
     color: rgba(0, 0, 0, 0.2);
 }
 
-.carousel__button--left {
-
-}
-
-.carousel__button--right {
-
-}
-
 .carousel__button {
     width: 50px;
     margin-top: 2px;
@@ -199,7 +191,6 @@ button:hover {
     justify-content: start;
     align-items: center;
     font-size: 2em;
-    margin-top: 35px;
 }
 
 .quiz {
@@ -381,7 +372,7 @@ container {
     flex-direction: column;
     align-items: center;
     height: 93vh;
-    background-image: url(number.png);
+    background-image: url(../imgs/number.png);
 }
 
 .number p {
