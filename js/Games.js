@@ -1,17 +1,3 @@
-//Guessing game
-
-function GuessingGame() {
-  var answer = prompt("Guess a number between 1 and 10");
-  var correct = Math.floor(Math.random() * 10 + 1);
-
-  do {
-    var answer = prompt("Guess again!");
-  }
-  while (answer != correct);
-
-  alert("Correct - the answer was " + correct + "! You must be psychic!");
-}
-
 // Quiz
 
 var questions = [
@@ -192,6 +178,7 @@ function generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton
   //on submit show results
   submitButton.onclick = function () {
     showResults(questions, quizContainer, resultsContainer);
+    submitButton.style.display = 'none';
   }
 }
 
