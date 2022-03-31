@@ -130,20 +130,52 @@ button:hover {
     width: 100%
 }
 
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carousel__button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel__button--left {
+
+}
+
+.carousel__button--right {
+
+}
+
+.carousel__button {
+    width: 50px;
+    margin-top: 2px;
+    color:rgba(220, 87, 130, 0.5);;
+}
+
+.carousel__button:hover {
+    background: none;
+    color: #dc5782;
+}
+
 .carousel__nav {
     display: flex;
     justify-content: center;
     padding: 10px 0;
     cursor: pointer;
-    margin-top: 15px;
 }
 
 .carousel__indicator {
-    border: 0;
+    border: white;
     border-radius: 50%;
     width: 15px;
     height: 15px;
-    background-color: rgba(0, 0, 0, 0.2);
     margin: 0 12px;
 }
 
@@ -155,6 +187,9 @@ button:hover {
     background-color: #dc5782;
 }
 
+.is-hidden {
+    visibility: hidden;
+}
 
 /* QUIZ */
 
