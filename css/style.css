@@ -389,6 +389,18 @@ container {
     background-color: #fcb8a1;
 }
 
+.peach#dialogbox {
+    background-color: white;
+}
+
+.peach#dialogboxbody {
+    background-color: #fcb8a1;
+}
+
+.peach#dialogboxfoot {
+    background-color: rgba(252, 184, 161, .5);
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
