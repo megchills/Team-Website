@@ -28,51 +28,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const cardArray = [
     {
         name: 'avocado',
-        img: 'imgs/avocado.png'
+        img: '../imgs/avocado.png'
     },
     {
         name: 'avocado',
-        img: 'imgs/avocado.png'
+        img: '../imgs/avocado.png'
     },
     {
         name: 'donut',
-        img: 'imgs/donut.png'
+        img: '../imgs/donut.png'
     },
     {
         name: 'donut',
-        img: 'imgs/donut.png'
+        img: '../imgs/donut.png'
     },
     {
         name: 'cookies',
-        img: 'imgs/cookies.png'
+        img: '../imgs/cookies.png'
     },
     {
         name: 'cookies',
-        img: 'imgs/cookies.png'
+        img: '../imgs/cookies.png'
     },
     {
         name: 'pizza',
-        img: 'imgs/pizza.png'
+        img: '../imgs/pizza.png'
     },
     {
         name: 'pizza',
-        img: 'imgs/pizza.png'
+        img: '../imgs/pizza.png'
     },
     {
         name: 'lemons',
-        img: 'imgs/lemons.png'
+        img: '../imgs/lemons.png'
     },
     {
         name: 'lemons',
-        img: 'imgs/lemons.png'
+        img: '../imgs/lemons.png'
     },
     {
         name: 'cake',
-        img: 'imgs/cake.png'
+        img: '../imgs/cake.png'
     },
     {
         name: 'cake',
-        img: 'imgs/cake.png'
+        img: '../imgs/cake.png'
     }
 ]
 
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createBoard() {
         for (let i = 0; i < cardArray.length; i++) {
             var card = document.createElement('img')
-            card.setAttribute('src', 'imgs/blank.png')
+            card.setAttribute('src', '../imgs/blank.png')
             card.setAttribute('data-id', i)
             card.addEventListener('click', flipcard)
             grid.appendChild(card)
@@ -108,12 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const optionTwoID = cardsChosenID[1]
         if (cardsChosen[0] === cardsChosen[1]) {
             Alert.render('You found a match!')
-            cards[optionOneID].setAttribute('src', 'imgs/white.png')
-            cards[optionTwoID].setAttribute('src', 'imgs/white.png')
+            cards[optionOneID].setAttribute('src', '../imgs/white.png')
+            cards[optionTwoID].setAttribute('src', '../imgs/white.png')
             cardsWon.push(cardsChosen)
         } else {
-            cards[optionOneID].setAttribute('src', 'imgs/blank.png')
-            cards[optionTwoID].setAttribute('src', 'imgs/blank.png')
+            cards[optionOneID].setAttribute('src', '../imgs/blank.png')
+            cards[optionTwoID].setAttribute('src', '../imgs/blank.png')
             Alert.render('Sorry, try again!')
         }
         
