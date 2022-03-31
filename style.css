@@ -376,6 +376,7 @@ container {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
+    align-items: center;
     background-color: rgba(252, 184, 161, 0.2);
 }
 
@@ -396,18 +397,18 @@ img:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc (93vh-h3);
     bottom: 0;
+    width: 85vw;
+    margin-top: -50px;
 }
 
 h3 {
     font-size: 3em;
     text-align: center;
-    margin: 10px 300px;
+    margin: 10px 30px;
 }
 
 .stats {
-    width: 100%;
     display: flex;
     justify-content: space-between;
 }
